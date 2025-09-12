@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const GetInTouch = () => {
+const GetinTouch = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -283,4 +283,4 @@ const GetInTouch = () => {
   );
 };
 
-export default GetInTouch;
+export default GetinTouch;
