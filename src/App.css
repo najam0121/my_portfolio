@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Polygon card shape */
+.polygon-card {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+
+}
+
+.polygon-card:hover {
+  clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px));
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(255, 0, 182, 0.25),
+    0 0 30px rgba(255, 0, 182, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced border glow effect */
+.polygon-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.polygon-card:hover::before {
+  opacity: 1;
+}
+
+/* Smooth transitions for all elements */
+.polygon-card * {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
