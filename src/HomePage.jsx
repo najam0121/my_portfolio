@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import GetInTouch from "./components/GetinTouch.jsx";
+import GetInTouch from "./components/GetInTouch.jsx";
 import Footer from "./components/Footer.jsx";
 import BestServices from "./components/BestServices.jsx";
 import TransitionSection from "./components/TransitionSection.jsx";
