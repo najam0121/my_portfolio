@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="relative">
             {/* Image Card - Profile view for mobile */}
             <TiltedCard
-              imageSrc="/public/self1.png"
+              imageSrc="/self1.png"
               altText="Developer Portfolio"
               captionText="Creative Developer"
               containerHeight="280px"
